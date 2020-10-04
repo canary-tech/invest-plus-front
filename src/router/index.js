@@ -1,14 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import SingIn from '../views/SignIn.vue'
+import SignUp from '../views/SignUp.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/sign-up',
+    name: 'SignUp',
+    component: SignUp
+  },  
+  {
+    path: '/login',
+    name: 'SingIn',
+    component: SingIn
+  },
+  {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'About',
+    component: About
   },
   {
     path: '/about',
@@ -23,5 +35,23 @@ const routes = [
 const router = new VueRouter({
   routes
 })
+
+router.beforeEach((to, from, next) => {
+    const token = localStorage.getItem('user-token');
+    // If logged in, or going to the Login page.
+    console.log(to.name)
+    if(to.name !== 'SingIn' && to.name !== 'SignUp') {
+      if (token || to.name === 'SingIn') {
+        // Continue to page.
+        next()
+      } else {
+        // Not logged in, redirect to login. 
+        next({name: 'SingIn'})
+      } 
+    } else {
+      next()
+    }
+  }
+);
 
 export default router

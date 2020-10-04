@@ -917,9 +917,6 @@
                                 </div>
                             </div>
                             <div class="card-body border-top">
-                                <p class="text-center scrollable ps-container ps-theme-default" style="overflow: hidden; width: auto; height: 105px;" data-ps-id="3d5463c5-f7c3-aae4-05b4-0f3dcea6d902">
-                                    Lorem ipsum dolor sit ametetur adipisicing elit, sed do eiusmod tempor incididunt adipisicing elit, sed do eiusmod tempor incididunLorem ipsum dolor sit ametetur adipisicing elit, sed do eiusmod tempor incididuntt
-                                <!-- <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></p> -->
                                 <ul class="list-icons d-flex flex-item text-center list-style-none">
                                     <li class="col my-1"><a href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Website"><i class="fa fa-globe pl-2"></i></a></li>
                                     <li class="col my-1"><a href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="twitter"><i class="fab fa-twitter pl-2"></i></a></li>
