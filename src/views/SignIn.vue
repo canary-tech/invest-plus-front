@@ -3,7 +3,7 @@
         <div class="col-xl-6 col-xs-12 col-sm-12 col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title text-info">Invest Plus</h2>
+                    <h2 class="card-title text-primary">Invest Plus</h2>
                     <!-- <h6 class="card-subtitle"> Login </h6>  -->
                     <form class="mt-4" v-on:submit.prevent="onSubmit">
                         <div class="form-group text-left text-muted">
@@ -21,7 +21,12 @@
                             <input type="checkbox" class="custom-control-input" id="checkbox0" value="check">
                             <label class="custom-control-label text-secondary" for="checkbox0">Check Me Out !</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <div class="custom-control custom-checkbox mr-sm-2 mb-3 " >
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </div>
+                        <div class="custom-control custom-checkbox mr-sm-2 mb-3 " >
+                            <router-link to="/sign-up" class="small">Ainda não tem uma Conta? Clique aqui</router-link>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -45,7 +50,7 @@ export default {
             signIn: "loginStore/signIn",
         }),
         onSubmit() {
-            this.signIn(this.login.email, this.login.password);
+            this.signIn(this.login);
         }
     }
 }
