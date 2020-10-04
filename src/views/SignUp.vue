@@ -56,7 +56,7 @@ export default {
             newUser: {
                 name: "",
                 email: "",
-                phoneNumber: "",
+                phone_number: "",
                 password: "",
                 confirmPassword: "",
                 acceptTerms: false
