@@ -41,6 +41,7 @@ const actions = {
                 (err, result) => {
                     if (err) {
                         console.log(err);
+                        alert(err.message);
                         return;
                     }
                     var cognitoUser = result.user;
@@ -83,8 +84,10 @@ const actions = {
             },
             onFailure: function (err) {
                console.log(err);
+               alert(err.message);
             },           
           });        
+
     },
     getLoggedUser() {
         localStorage.getItem(NEW_USER);
