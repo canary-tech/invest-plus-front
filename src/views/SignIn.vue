@@ -3,7 +3,7 @@
         <div class="col-xl-6 col-xs-12 col-sm-12 col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title text-primary">Invest Plus</h2>
+                    <h2 class="card-title text-success">Invest Plus</h2>
                     <!-- <h6 class="card-subtitle"> Login </h6>  -->
                     <form class="mt-4" v-on:submit.prevent="onSubmit">
                         <div class="form-group text-left text-muted ">
