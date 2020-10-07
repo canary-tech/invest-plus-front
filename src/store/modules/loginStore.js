@@ -6,7 +6,6 @@ import {
     AuthenticationDetails,
   } from "amazon-cognito-identity-js";
 
-const NEW_USER = 'new-user';
 const USER_TOKEN = 'user-token';
 const VUE_APP_COGNITO_USER_POOL_ID = process.env.VUE_APP_COGNITO_USER_POOL_ID;
 const VUE_APP_COGNITO_CLIENT_ID = process.env.VUE_APP_COGNITO_CLIENT_ID;
@@ -41,6 +40,7 @@ const actions = {
                 (err, result) => {
                     if (err) {
                         console.log(err);
+                        alert(err.message);
                         return;
                     }
                     var cognitoUser = result.user;
@@ -75,19 +75,21 @@ const actions = {
          
           cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: function (result) {
-              localStorage.setItem('access_token', result.getAccessToken().getJwtToken());
-              localStorage.setItem('id_token', result.getIdToken().getJwtToken());
-              localStorage.setItem(USER_TOKEN, login.email);
+              //localStorage.setItem('access_token', result.getAccessToken().getJwtToken());
+              //localStorage.setItem('id_token', result.getIdToken().getJwtToken());
+              localStorage.setItem(USER_TOKEN, JSON.stringify(result));
               //commit('setLoggedUserUser', result.getIdToken().payload);
               router.push("/");
             },
             onFailure: function (err) {
                console.log(err);
+               alert(err.message);
             },           
           });        
+
     },
     getLoggedUser() {
-        localStorage.getItem(NEW_USER);
+        localStorage.getItem(USER_TOKEN);
     },
 
 }
