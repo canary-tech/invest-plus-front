@@ -18,7 +18,7 @@
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> January 2020 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">February 2020</a> <a class="dropdown-item" href="#">March 2020</a> <a class="dropdown-item" href="#">April 2020</a> </div>
                             </div>
-                            <button class="btn btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
+                            <button class="btn btn-success"><i class="mdi mdi-plus-circle"></i> Novo Produto</button>
                         </div>
                     </div>
                 </div>
