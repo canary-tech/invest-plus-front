@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import About from '../views/About.vue'
 import SingIn from '../views/SignIn.vue'
 import SignUp from '../views/SignUp.vue'
+import Dashboard from '../views/Dashboard'
 
 Vue.use(VueRouter)
 
@@ -19,8 +19,8 @@ const routes = [
   },
   {
     path: '/',
-    name: 'About',
-    component: About
+    name: 'Dashboard',
+    component: Dashboard
   },
   {
     path: '/about',
