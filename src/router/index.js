@@ -4,10 +4,11 @@ import Menu from '../components/Menu.vue'
 import SignUp from '../views/SignUp.vue'
 import SignIn from '../views/SignIn.vue'
 import Dashboard from '../views/Dashboard'
-import ProductList from '../views/ProductList'
+import ProductList from '../views/product/ProductList'
+import ProductForm from '../views/product/ProductForm'
 
 Vue.use(VueRouter)
-
+ 
 const routes = [
   {
     path: '/sign-up',
@@ -39,6 +40,14 @@ const routes = [
     components: {
       logged: Menu,
       default: ProductList
+    }
+  },
+  {
+    path: '/products-edit/:id',
+    name: 'ProductForm',
+    components: {
+      logged: Menu,
+      default: ProductForm
     }
   },
   {
