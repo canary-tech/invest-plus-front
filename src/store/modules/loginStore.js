@@ -91,6 +91,9 @@ const actions = {
     getLoggedUser() {
         localStorage.getItem(USER_TOKEN);
     },
+    logOut() {
+        localStorage.removeItem(USER_TOKEN);       
+    }
 
 }
 

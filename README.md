@@ -37,5 +37,18 @@ GitHub CLI: https://cli.github.com/manual/index
 
 Template:   
 
-https://www.wrappixel.com/demos/admin-templates/monster-bootstrap-latest/monster/src/dark/index.html
-https://www.wrappixel.com/templates/monsteradmin/?ref=30
+https://www.wrappixel.com/demos/admin-templates/monster-bootstrap-latest/monster/src/dark/index.html   
+
+https://www.wrappixel.com/templates/monsteradmin/?ref=30   
+
+
+#### Font-Awesome
+
+https://fontawesome.com/icons?d=listing&q=left
+
+$ npm i --save @fortawesome/fontawesome-svg-core
+$ npm i --save @fortawesome/free-solid-svg-icons 
+$ npm i --save @fortawesome/free-brands-svg-icons
+$ npm i --save @fortawesome/vue-fontawesome
+
+https://www.wrappixel.com/demos/admin-templates/monster-bootstrap-latest/monster/dist/css/icons/font-awesome/webfonts/fa-regular-400.ttf

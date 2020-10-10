@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import SingIn from '../views/SignIn.vue'
+import Menu from '../components/Menu.vue'
 import SignUp from '../views/SignUp.vue'
+import SignIn from '../views/SignIn.vue'
 import Dashboard from '../views/Dashboard'
+import ProductList from '../views/ProductList'
 
 Vue.use(VueRouter)
 
@@ -10,17 +12,34 @@ const routes = [
   {
     path: '/sign-up',
     name: 'SignUp',
-    component: SignUp
+    components: {
+      logged: null,
+      default: SignUp
+    }
   },  
   {
     path: '/login',
-    name: 'SingIn',
-    component: SingIn
+    name: 'SignIn',
+    components: {
+      logged: null,
+      default: SignIn, //require('../views/SignIn.vue').default,
+    }
   },
   {
     path: '/',
     name: 'Dashboard',
-    component: Dashboard
+    components: {
+      logged: Menu,
+      default: Dashboard
+    }
+  },
+  {
+    path: '/products',
+    name: 'Products',
+    components: {
+      logged: Menu,
+      default: ProductList
+    }
   },
   {
     path: '/about',
@@ -40,13 +59,13 @@ router.beforeEach((to, from, next) => {
     const token = localStorage.getItem('user-token');
     // If logged in, or going to the Login page.
     console.log(to.name)
-    if(to.name !== 'SingIn' && to.name !== 'SignUp') {
-      if (token || to.name === 'SingIn') {
+    if(to.name !== 'SignIn' && to.name !== 'SignUp') {
+      if (token || to.name === 'SignIn') {
         // Continue to page.
         next()
       } else {
         // Not logged in, redirect to login. 
-        next({name: 'SingIn'})
+        next({name: 'SignIn'})
       } 
     } else {
       next()
