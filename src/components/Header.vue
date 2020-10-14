@@ -6,14 +6,15 @@
                         <font-awesome-icon icon="bars" />
                     </a>
                     <router-link :to="{ path: '/'}" class="navbar-brand">
+                        <span class="logo-text">
+                             <!-- <img src="../assets/monster/images/logo-text.png" alt="homepage" class="dark-logo">
+                             <img src="../assets/monster/images/logo-light-text.png" class="light-logo" alt="homepage"> -->
+                             iPlus
+                        </span> 
                         <b class="logo-icon">
                             <img src="../assets/monster/images/logo-icon.png" alt="homepage" class="dark-logo">
                             <img src="../assets/monster/images/logo-light-icon.png" alt="homepage" class="light-logo">
                         </b>
-                        <span class="logo-text">
-                             <img src="../assets/monster/images/logo-text.png" alt="homepage" class="dark-logo">
-                             <img src="../assets/monster/images/logo-light-text.png" class="light-logo" alt="homepage">
-                        </span>
                     </router-link>
                     <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <!-- <i class="ti-more"></i> -->

@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "amazon-cognito-identity-js": "^4.4.0",
     "aws-sdk": "^2.766.0",
+    "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
